@@ -1,0 +1,25 @@
+{
+  "name": "tansotech_web",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite src",
+    "build": "vite build src",
+    "preview": "vite preview src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naverkwon/tansotech-web-total.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naverkwon/tansotech-web-total/issues"
+  },
+  "homepage": "https://github.com/naverkwon/tansotech-web-total#readme",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
