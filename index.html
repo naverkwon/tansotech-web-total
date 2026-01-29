@@ -28,16 +28,24 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero">
-      <img src="assets/hero_eco_tech_1769595679528.png" alt="Eco Tech Hero" class="hero-bg">
-      <div class="container hero-container">
+    <section class="hero"
+      style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: #000; overflow: hidden;">
+      <img src="assets/hero_eco_tech_1769595679528.png" alt="Eco Tech Hero" class="hero-bg"
+        style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+      <div class="container" style="position: relative; z-index: 2;">
         <div class="hero-content">
           <span class="eyebrow" id="hero-eyebrow">ECO GREEN GROUND | (주)탄소테크</span>
-          <h1>탄소중립과 지속가능한 미래를 위한<br>신재생 에너지 및 탄소 저감 솔루션</h1>
-          <p class="lead">녹색 지구를 향한 탄소테크의 약속,<br>탄소 저감 기술로 내일의 가치를 만듭니다.</p>
-          <div class="hero-actions">
-            <a href="#solutions" class="primary">솔루션 탐색</a>
-            <a href="#market" class="ghost">시장 리포트</a>
+          <h1 style="font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin: 20px 0; font-weight: 800;">탄소중립과
+            지속가능한 미래를 위한<br>신재생 에너지 및 탄소 저감 솔루션</h1>
+          <p class="lead" style="font-size: 1.25rem; color: #d1d1d1; max-width: 800px; margin: 0 auto 40px;">녹색 지구를 향한
+            탄소테크의 약속,<br>탄소 저감 기술로 내일의 가치를 만듭니다.</p>
+          <div class="hero-actions" style="display: flex; gap: 20px; justify-content: center;">
+            <a href="#solutions" class="primary"
+              style="background: #00a86b; color: #000; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 700;">솔루션
+              탐색</a>
+            <a href="#market" class="ghost"
+              style="border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 18px 36px; border-radius: 50px; text-decoration: none; font-weight: 700;">시장
+              리포트</a>
           </div>
         </div>
       </div>
@@ -281,9 +289,9 @@
 
 
 
-    <!-- Modal Templates -->
-    <div id="modal-templates" style="display: none;">
-      <!-- detail-basics: 탄소배출권 기초 가이드 -->
+    <!-- Knowledge Base & Technical Details (Modals Content) -->
+    <div id="modal-templates" style="display:none !important;">
+      <!-- detail-basics: 탄소 배출권 기초 가이드 -->
       <div id="detail-basics" style="display:none;">
         <div class="modal-body-content">
           <div class="modal-header-visual">
@@ -768,21 +776,37 @@
   </main>
 
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-info">
-        <a class="footer-logo" href="index.html">TANSOTECH</a>
-        <p>주식회사 탄소테크 | 대표이사: 임경현</p>
-        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">
-          사업자 등록 번호: 339-87-02343<br />
-          주소: 서울특별시 서초구 논현로 17길 10, 3층(양재동, 재호빌딩)
-        </p>
+  <footer
+    style="background: #050505; padding: 100px 0 60px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 100px;">
+    <div class="container">
+      <div class="footer-content"
+        style="display: flex; justify-content: space-between; align-items: flex-start; gap: 60px;">
+        <div class="footer-info">
+          <a class="footer-logo" href="index.html"
+            style="font-size: 2rem; font-weight: 900; color: #00a86b; text-decoration: none; display: block; margin-bottom: 24px; letter-spacing: -0.03em;">TANSOTECH</a>
+          <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #fff;">주식회사 탄소테크 | 대표이사: 임경현</p>
+          <p style="font-size: 0.9rem; opacity: 0.6; line-height: 1.8; color: #d1d1d1;">
+            사업자 등록 번호: 339-87-02343<br />
+            주소: 서울특별시 서초구 논현로 17길 10, 3층(양재동, 재호빌딩)
+          </p>
+        </div>
+        <div class="footer-links" style="display: flex; gap: 80px;">
+          <div class="link-group">
+            <h4 style="color: #fff; margin-bottom: 20px; font-size: 1rem; font-weight: 700;">NAVIGATION</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+              <li><a href="index.html" style="color: #d1d1d1; text-decoration: none; font-size: 0.95rem;">탄소테크 메인</a>
+              </li>
+              <li><a href="tree.html" style="color: #d1d1d1; text-decoration: none; font-size: 0.95rem;">나무(탄소상쇄)</a>
+              </li>
+              <li><a href="solar.html" style="color: #d1d1d1; text-decoration: none; font-size: 0.95rem;">태양광 에너지</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <h4>메뉴</h4>
-        <a href="index.html">탄소테크</a>
-        <a href="tree.html">나무(탄소상쇄)</a>
-        <a href="solar.html">태양광 에너지</a>
+      <div class="footer-bottom"
+        style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-size: 0.8rem; color: rgba(255,255,255,0.3);">
+        &copy; 2025 TANSOTECH. All rights reserved.
       </div>
     </div>
   </footer>
