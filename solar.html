@@ -1,123 +1,233 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>탄소테크 - 태양열</title>
-  <meta name="description" content="탄소테크의 태양열 기반 열에너지 솔루션을 소개합니다." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet" />
+  <title>태양열에너지 전문 기술 리포트 | 탄소테크</title>
   <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="grain"></div>
-  <div class="glow"></div>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .article-body {
+      line-height: 1.8;
+      color: var(--text-dim);
+      font-size: 1.05rem;
+    }
 
+    .article-body h2 {
+      color: #fff;
+      margin-top: 60px;
+      margin-bottom: 24px;
+      font-size: 2rem;
+    }
+
+    .article-body h3 {
+      color: #ffce44;
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+
+    .article-body p {
+      margin-bottom: 24px;
+    }
+
+    .article-body b {
+      color: #fff;
+    }
+
+    .data-box-premium {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 32px;
+      margin: 40px 0;
+    }
+
+    .quote-box {
+      border-left: 4px solid #ffce44;
+      padding-left: 30px;
+      font-style: italic;
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 40px 0;
+    }
+
+    .stats-grid-detailed {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .stat-item-detailed {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .stat-item-detailed .label {
+      display: block;
+      font-size: 0.8rem;
+      color: #ffce44;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .stat-item-detailed .value {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="sub-page">
+  <div class="grain"></div>
   <header class="site-header">
     <a class="logo" href="index.html">TANSOTECH</a>
     <nav class="nav">
       <a href="index.html">탄소테크</a>
-      <a href="wood.html">나무</a>
-      <a href="solar.html">태양열</a>
-      <button class="nav-cta" type="button">문의하기</button>
+      <a href="tree.html">나무(탄소상쇄)</a>
+      <a href="solar.html" class="active">태양광 에너지</a>
+      <button class="nav-cta" type="button" data-detail-id="detail-consulting">컨설팅 문의</button>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Solar thermal</p>
-        <h1>열에너지 혁신으로<br />산업 탄소를 줄입니다.</h1>
-        <p class="lead">
-          탄소테크는 산업 현장에 최적화된 태양열 집열 시스템을 설계해
-          화석연료 의존도를 줄이고 운영 비용을 절감합니다.
-        </p>
-        <div class="hero-actions">
-          <button class="primary" type="button">솔루션 문의</button>
-          <button class="ghost" type="button">설치 사례</button>
-        </div>
-        <div class="hero-metrics">
-          <div>
-            <span>70%</span>
-            <p>탄소 배출 절감</p>
-          </div>
-          <div>
-            <span>140MW</span>
-            <p>설비 설계 용량</p>
-          </div>
-          <div>
-            <span>24/7</span>
-            <p>열 저장 운전</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual image">
-        <img src="assets/solar-hero.jpg" alt="태양열 설비" />
+  <main class="article-body">
+    <section class="hero-sub no-reveal"
+      style="background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/hero_eco_tech_1769595679528.png') center/cover;">
+      <div class="container">
+        <span class="eyebrow" style="color: #ffce44;">ENERGY TRANSITION STRATEGY</span>
+        <h1 style="font-size: 3.5rem; margin-top: 20px;">에너지 자립과 재무적 수익화:<br />기업용 태양광 에너지 투자 모델 분석</h1>
+        <p class="lead" style="max-width: 800px; margin: 30px auto;">무한한 태양 에너지를 전력 자산으로 전환하여 기업의 RE100 달성과<br />장기적인
+          에너지 비용 절감을 이끄는 혁신적 비즈니스 모델을 제안합니다.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-header">
-        <h2>태양열 솔루션</h2>
-        <p>산업용 열 에너지 전환에 최적화된 설계와 운영 체계를 제공합니다.</p>
-      </div>
-      <div class="cards">
-        <article class="card">
-          <h3>모듈형 집열판</h3>
-          <p>현장 조건에 맞춘 모듈형 집열판 구성으로 확장성과 유지보수를 개선합니다.</p>
-        </article>
-        <article class="card">
-          <h3>열 스토리지</h3>
-          <p>고온 스토리지 기술로 안정적인 열 공급을 지원합니다.</p>
-        </article>
-        <article class="card">
-          <h3>디지털 트윈</h3>
-          <p>운영 데이터를 기반으로 성능을 예측하고 효율을 극대화합니다.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="section-header">
-        <h2>운영 인포그래픽</h2>
-        <p>태양열 기반 공정 전환 흐름을 시각화해 이해도를 높입니다.</p>
-      </div>
-      <div class="media-split">
-        <div>
-          <h3>에너지 흐름 설계</h3>
-          <p>공정별 열 수요에 맞춘 설비 설계로 에너지 손실을 최소화합니다.</p>
+      <div class="container">
+        <div class="quote-box">
+          "2026년 탄소국경조정제도(CBAM) 본격 시행에 대비하여 재생에너지 확보는 더 이상 선택이 아닌 제조 경쟁력의 핵심입니다."
         </div>
-        <img src="assets/solar-info.jpg" alt="태양열 인포그래픽" />
-      </div>
-    </section>
 
-    <section class="section callout">
-      <div>
-        <h2>태양열 전환을 시작하세요.</h2>
-        <p>현장 조건에 맞춘 설비 구성과 운영 전략을 제안합니다.</p>
+        <h2>1. 에너지 비용의 리스크 관리 및 고정화</h2>
+        <p>불안정한 글로벌 에너지 시장과 지속적인 전기요금 인상은 생산 원가의 불확실성을 높입니다. 태양광 에너지 시스템 도입은 향후 20~25년간의 **에너지 가격을 고정(Price Locking)**하여
+          재무 리스크를 선제적으로 방어하는 투자 전략입니다.</p>
+
+        <div class="data-box-premium">
+          <h3>태양열 발전의 경제적 성과 지표</h3>
+          <div class="stats-grid-detailed">
+            <div class="stat-item-detailed">
+              <span class="label">투자 수익률 (ROI)</span>
+              <span class="value">연 8.5%</span>
+              <p style="font-size: 0.8rem; margin-top: 10px;">발전량 가중치 및 REC 판매 수익 포함</p>
+            </div>
+            <div class="stat-item-detailed">
+              <span class="label">LCOE 하락률</span>
+              <span class="value">-35%</span>
+              <p style="font-size: 0.8rem; margin-top: 10px;">최근 5년간 모듈 효율 개선 및 단가 인하</p>
+            </div>
+            <div class="stat-item-detailed">
+              <span class="label">손익분기점 (BEP)</span>
+              <span class="value">5~7년</span>
+              <p style="font-size: 0.8rem; margin-top: 10px;">기업용 대규모 설비 기준 평균치</p>
+            </div>
+          </div>
+          <p>차세대 N-Type 고효율 모듈 도입을 통해 발전량을 극대화하고, 인공지능 기반의 스마트 그리드 최적화를 통해 에너지 손실을 15% 이상 절감합니다.</p>
+        </div>
+
+        <h2>2. 비즈니스 모델: 자가소비형 PPA에서 수익공유까지</h2>
+        <p>기업의 환경과 재무 전략에 따라 최적화된 도입 모델을 제공합니다.</p>
+
+        <div class="grid-2" style="gap: 40px; align-items: flex-start;">
+          <div>
+            <h3>직접 투자 및 자가소비 (On-site PPA)</h3>
+            <ul class="modal-detail-list">
+              <li><b>적합 대상</b>: 공장 지붕 및 유휴 부지 보유 기업</li>
+              <li><b>특징</b>: 직접 소비를 통한 전기료 즉시 절감 및 RE100 이행 입증</li>
+              <li><b>혜택</b>: 정부 에너지 저감 시설 세액 공제 활용 가능</li>
+            </ul>
+          </div>
+          <div class="side-note" style="background: rgba(255, 206, 68, 0.05); border-color: #ffce44;">
+            <h4>VPP (가상발전소) 참여</h4>
+            <p>개별 사업장의 잉여 전력을 AI로 모아서 전력 거래 시장에 입찰함으로써, 추가적인 현금 수익을 창출합니다. 기업의 에너지 자산이 전력망 유연성 계통의 핵심 자원으로 기능하게 됩니다.</p>
+          </div>
+        </div>
+
+        <h2>3. 기술 혁신: 듀얼 히트싱크 및 스마트 모니터링</h2>
+        <p>단순 설치를 넘어, 발전 효율을 방해하는 열 손실을 최소화하고 365일 실시간 관제 시스템을 통해 운영 효율(O&M)을 극대화합니다.</p>
+
+        <div class="data-box-premium" style="background: rgba(255, 206, 68, 0.02);">
+          <div class="grid-2">
+            <div>
+              <h4>Smart Forecasting</h4>
+              <p>기상청 API와 연동된 자체 예측 모델을 통해 내일의 발전량을 95% 확률로 예측하여 ESS(에너지저장장치) 충방전을 최적화합니다.</p>
+            </div>
+            <div>
+              <h4>Real-time RE100 Reporting</h4>
+              <p>실시간으로 전사적 재생에너지 사용량 및 탄소 저감량을 대시보드로 시각화하여 ESG 공시 자료로 즉시 활용 가능합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-note" style="border-color: #ffce44; margin-bottom: 100px; margin-top: 60px;">
+          <p><b>"태양광 에너지는 이제 단순한 설비가 아닌, 기업의 친환경 경쟁력을 상징하는 재무적 엔진입니다. 탄소테크와 함께 지속 가능한 에너지를 자산화하십시오."</b></p>
+        </div>
       </div>
-      <button class="primary" type="button">상담 요청</button>
     </section>
   </main>
 
-  <footer class="footer">
-    <div>
-      <p class="footer-title">TANSOTECH</p>
-      <p>탄소테크 | 지속가능 기술 솔루션</p>
-      <p class="footer-meta">주식회사 : 탄소테크</p>
-      <p class="footer-meta">대표이사 : 임경현</p>
-      <p class="footer-meta">사업자 등록 번호 : 339-87-02343</p>
-      <p class="footer-meta">이메일 : tansotech@gmail.com</p>
-      <p class="footer-meta">주소 : 서울특별시 서초구 논현로 17길 10, 3층(양재동, 재호빌딩)</p>
-    </div>
-    <div class="footer-links">
-      <a href="index.html">탄소테크</a>
-      <a href="wood.html">나무</a>
-      <a href="solar.html">태양열</a>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <a class="footer-logo" href="index.html">TANSOTECH</a>
+        <p>(주)탄소테크 | 기후 리스크를 기업의 가치로</p>
+      </div>
+      <div class="footer-links">
+        <h4>메뉴</h4>
+        <a href="index.html#market">마켓 인사이트</a>
+        <a href="index.html#solutions">솔루션</a>
+        <a href="tree.html">나무(탄소상쇄)</a>
+        <a href="solar.html">태양열에너지</a>
+      </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+
+  <!-- detail-consulting: 컨설팅 문의 모달 -->
+  <div id="detail-consulting" style="display:none;">
+    <div class="modal-body-content">
+      <div class="modal-header-visual">
+        <span class="eyebrow">Consulting Request</span>
+        <h2>전문 컨설팅 신청</h2>
+        <p>탄소 중립 및 신재생 에너지 전환을 위한 전략적 파트너십을 제안해 드립니다.</p>
+      </div>
+
+      <form class="consulting-form" onsubmit="event.preventDefault(); alert('컨설팅 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.');">
+        <div class="form-group">
+          <label>기업명 / 담당자 성함</label>
+          <input type="text" placeholder="예: (주)탄소테크 / 홍길동" required>
+        </div>
+        <div class="form-group">
+          <label>연락처 / 이메일</label>
+          <input type="text" placeholder="예: 010-1234-5678 / tansotech@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label>문의 상세 내용</label>
+          <textarea rows="4" placeholder="문의하실 내용을 상세히 적어주세요." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">상담 신청하기</button>
+      </form>
+
+      <div class="consulting-info" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border);">
+        <p>📧 이메일: tansotech@gmail.com</p>
+        <p>📞 전화: 02-1234-5678</p>
+        <p>📍 주소: 서울특별시 서초구 논현로 17길 10, 3층(양재동, 재호빌딩)</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

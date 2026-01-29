@@ -18,10 +18,10 @@
   <header class="site-header">
     <a class="logo" href="index.html">TANSOTECH</a>
     <nav class="nav">
-      <a href="#market">글로벌 동향</a>
-      <a href="#strategy">대응 전략</a>
-      <a href="#guide">준비 가이드</a>
-      <button class="nav-cta" type="button">컨설팅 문의</button>
+      <a href="index.html" class="active">탄소테크</a>
+      <a href="tree.html">나무(탄소상쇄)</a>
+      <a href="solar.html">태양광 에너지</a>
+      <button class="nav-cta" type="button" data-detail-id="detail-consulting">컨설팅 문의</button>
     </nav>
   </header>
 
@@ -49,34 +49,50 @@
         </div>
 
         <div class="crisis-container">
-          <!-- Left: Visual -->
+          <!-- Left: Visual with Overlay Data -->
           <div class="crisis-visual reveal">
-            <img src="assets/climate-forest.jpg" alt="Climate Crisis Impact" class="viz-img-cover">
+            <img src="assets/climate-forest.jpg" alt="Climate Crisis Impact" class="viz-img-cover"
+              style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="crisis-overlay-data">
+              <div class="data-point">
+                <span class="label">CO₂ 농도</span>
+                <span class="value">421 <small>ppm</small></span>
+              </div>
+              <div class="data-point">
+                <span class="label">해수면 상승</span>
+                <span class="value">+4.5 <small>mm/yr</small></span>
+              </div>
+            </div>
           </div>
 
-          <!-- Right: Data & Context -->
-          <div class="crisis-content">
-            <div class="data-box" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-              <div class="stat-group" style="margin-bottom: 0;">
-                <h3 class="stat-title">글로벌 경제 피해</h3>
-                <div class="stat-value" style="font-size: 2.8rem;">1.3T <span class="unit">USD</span></div>
-                <p class="stat-desc">매년 자연재해로 인한 경제 손실액</p>
+          <!-- Right: Actionable Stats -->
+          <div class="crisis-content reveal">
+            <div class="warning-box">
+              <span class="warning-tag">CRITICAL ALERT</span>
+              <h3>대한민국 기후대응 주소: CCPI 세계 60위</h3>
+              <p>국제 사회가 평가하는 한국의 기후 대응 성적표는 최하위권입니다. 이는 곧 강력한 국제적 규제와 관세 장벽이 닥쳐올 것임을 예고합니다.</p>
+            </div>
+
+            <div class="grid-2" style="gap: 20px;">
+              <div class="stat-card">
+                <h4 style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 5px;">글로벌 경제 피해</h4>
+                <div style="font-size: 1.8rem; font-weight: 800; color: #ff4444;">1.3T <small
+                    style="font-size: 0.9rem;">USD</small></div>
+                <p style="font-size: 0.75rem; margin-top: 5px;">매년 기록되는 자연재해 손실액</p>
               </div>
-              <div class="stat-group" style="margin-bottom: 0;">
-                <h3 class="stat-title">기후 사망자 수</h3>
-                <div class="stat-value" style="font-size: 2.8rem;">5M+ <span class="unit">명</span></div>
-                <p class="stat-desc">극한 기후로 인한 연간 사망자 추산치</p>
+              <div class="stat-card">
+                <h4 style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 5px;">기후 사망자 수</h4>
+                <div style="font-size: 1.8rem; font-weight: 800; color: #ff4444;">5M+ <small
+                    style="font-size: 0.9rem;">명</small></div>
+                <p style="font-size: 0.75rem; margin-top: 5px;">극한 기후로 인한 연간 사망자</p>
               </div>
             </div>
-            <div class="info-text">
-              <h3>대한민국 기후대응 주소</h3>
-              <p>대한민국은 기후대응지수(CCPI) 세계 최하위권(60위)에 머물며 국제적 압력에 노출되어 있습니다.</p>
-              <ul class="crisis-list">
-                <li><b>1조 3,000억원</b>: 2020년 국내 자연재해 피해액</li>
-                <li><b>세계 14번째</b>: 탄소중립 법제화국으로서 강력한 규제 이행</li>
-                <li><b>2050 Net Zero</b>: 국가 목표 달성을 위한 급진적 전환의 필요성</li>
-              </ul>
-            </div>
+
+            <ul class="crisis-list">
+              <li><b>1조 3,000억원</b>: 2020년 국내 자연재해 피해액</li>
+              <li><b>세계 14번째</b>: 탄소중립 법제화국으로서 강력한 규제 이행</li>
+              <li><b>2050 Net Zero</b>: 국가 목표 달성을 위한 급진적 전환의 필요성</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -91,38 +107,61 @@
           <p>전통적인 규제 시장을 넘어 자발적 탄소 시장(VCM)은 폭발적인 성장을 앞두고 있습니다.</p>
         </div>
 
-        <div class="card-grid">
-          <div class="card reveal" data-detail-id="detail-ets">
-            <span class="card-tag">Compliance</span>
-            <h3>규제 시장 (ETS)</h3>
-            <p>정부의 할당량 내에서 탄소 배출 권리를 거래하는 법적 구속력이 있는 시장입니다.</p>
-            <div class="market-stat">시장 점유율 90%</div>
-            <div class="learn-more">더 알아보기 +</div>
-          </div>
+        <div class="market-intro reveal">
+          <div class="grid-2">
+            <div class="card" data-detail-id="detail-ets">
+              <span class="card-tag">Compliance</span>
+              <h3>규제 시장 (ETS)</h3>
+              <p>정부의 할당량 내에서 탄소 배출 권리를 거래하는 법적 구속력이 있는 시장입니다.</p>
+              <div class="market-stat">시장 점유율 90%</div>
+              <div class="learn-more">더 알아보기 +</div>
+            </div>
 
-          <div class="card reveal" data-detail-id="detail-vcm">
-            <span class="card-tag">Voluntary</span>
-            <h3>자발적 시장 (VCM)</h3>
-            <p>기업의 ESG 가치 제고를 위해 자발적으로 배출권을 구매/거래하는 혁신적인 신시장입니다.</p>
-            <div class="market-stat">2030년 <span class="highlight">15배</span> 성장 전망</div>
-            <div class="learn-more">더 알아보기 +</div>
+            <div class="card" data-detail-id="detail-vcm">
+              <span class="card-tag">Voluntary</span>
+              <h3>자발적 시장 (VCM)</h3>
+              <p>기업의 ESG 가치 제고를 위해 자발적으로 배출권을 구매/거래하는 혁신적인 신시장입니다.</p>
+              <div class="market-stat">2030년 <span class="highlight">15배</span> 성장 전망</div>
+              <div class="learn-more">더 알아보기 +</div>
+            </div>
           </div>
         </div>
 
-        <div class="split-panel reveal">
+        <div class="split-panel reveal" style="margin-top: 60px;">
           <div class="panel-content">
-            <h3>수익 창출 & 비용 절감 모델 (MAC 로직)</h3>
-            <p>자체 감축 역량이 높은 기업(A)은 남는 배출권을 판매하여 수익을 창출하고, 감축 여력이 낮은 기업(B)은 시장 매입을 통해 규제 과징금 리스크를 해지합니다. 이는 경제적으로 가장 효율적인
-              탄소 중립 달성 경로입니다.</p>
-            <div class="grid-2" style="margin-top: 40px; gap: 30px;">
-              <div class="stat-card">
-                <img src="assets/carbon_data_viz_1769595785848.png" alt="Marginal Abatement Cost Curve" class="viz-img">
-                <p class="img-caption">한계감축비용(MAC)곡선 및 시장 거래 원리</p>
-              </div>
-              <div class="stat-card">
-                <img src="assets/market_growth.png" alt="VCM Growth Projection" class="viz-img">
-                <p class="img-caption">VCM 시장의 기하급수적 성장 전망 (2030)</p>
-              </div>
+            <h3>글로벌 탄소 시장의 확장 타임라인</h3>
+            <div class="table-container" style="overflow-x: auto; margin-top: 30px;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>연도</th>
+                    <th>주요 시장 이정표</th>
+                    <th>전략적 내용</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1997</td>
+                    <td>교토의정서 채택</td>
+                    <td>온실가스 감축 의무 체제 구축 (배출권 거래제의 효시)</td>
+                  </tr>
+                  <tr>
+                    <td>2005</td>
+                    <td>EU ETS 출범</td>
+                    <td>세계 최초 및 최대 규모의 탄소 거래 시스템 가동</td>
+                  </tr>
+                  <tr>
+                    <td>2015</td>
+                    <td>한국 ETS 시행</td>
+                    <td>규제 리스크 현실화 및 탄소 비용의 자산화 시작</td>
+                  </tr>
+                  <tr>
+                    <td>2020</td>
+                    <td>탄소 ETF(KRBN) 상장</td>
+                    <td>본격적인 금융 자산화 및 투자 접근성 확대</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -153,392 +192,596 @@
         </div>
       </div>
     </section>
-    <!-- Strategy Section -->
-    <section class="section" id="strategy" style="background: var(--bg-card); border-radius: 40px;">
-      <div class="section-header" style="text-align: center;">
-        <span class="eyebrow">CORP STRATEGY</span>
-        <h2>기업의 대응 전략:<br />한계비용 최적화와 리스크 헤지</h2>
-      </div>
-
-      <div class="card-grid">
-        <div class="card" data-detail-id="detail-short">
-          <h3>단기: 규제 최적화</h3>
-          <p>정밀한 온실가스 인벤토리 구축 및 실질 배출량 산정을 통해 할당량 관리 비용을 최소화합니다.</p>
-        </div>
-        <div class="card" data-detail-id="detail-mid">
-          <h3>중기: 자산 고도화</h3>
-          <p>탄소 저감 기술 및 신재생 에너지 직접 투자를 통해 배출권 자급률을 제고하고 포트폴리오를 다변화합니다.</p>
-        </div>
-        <div class="card" data-detail-id="detail-long">
-          <h3>장기: 미래 경쟁력</h3>
-          <p>공급망 내 탄소 중립 브랜드 가치를 확립하고 저감 솔루션의 자산화를 통해 신규 수익 모델을 창출합니다.</p>
-        </div>
-      </div>
-
-      <div style="margin-top: 60px;">
-        <img class="viz-img" src="assets/renewable_energy_model_1769595865454.png" alt="Renewable Energy Strategy"
-          style="max-height: 400px; object-fit: cover;" />
-      </div>
-    </section>
-
     <!-- Concept Guide Section -->
     <section class="section" id="guide">
-      <div class="section-header">
-        <span class="eyebrow">KNOWLEDGE BASE</span>
-        <h2>탄소 경제 이해하기</h2>
-        <p>탄소 시장의 두 축, 규제 시장(ETS)과 자발적 시장(VCM)을 통해 새로운 기회를 포착하십시오.</p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card" data-detail-id="detail-ets-concept">
-          <h3 style="color: var(--primary);">규제 시장 (ETS)</h3>
-          <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px;">정부 설정 법적 할당량 내 거래</p>
-          <img src="assets/ets-diagram.jpg" alt="ETS Flow"
-            style="width: 100%; border-radius: 12px; margin-bottom: 20px; opacity: 0.8;">
-          <ul style="padding-left: 20px; font-size: 0.95rem;">
-            <li>강제성 높음 (미이행 시 과징금)</li>
-            <li>에너지 다소비 기업 의무 주체</li>
-            <li>국가 NDC 달성 목적</li>
-          </ul>
-        </div>
-        <div class="card" data-detail-id="detail-vcm-concept">
-          <h3 style="color: #4db8ff;">자발적 시장 (VCM)</h3>
-          <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px;">민간 주도 자발적 감축 성과 거래</p>
-          <img src="assets/carbon_strategy.png" alt="VCM Strategy"
-            style="width: 100%; border-radius: 12px; margin-bottom: 20px; opacity: 0.8;">
-          <ul style="padding-left: 20px; font-size: 0.95rem;">
-            <li>강제성 없음 (ESG 가치 창출)</li>
-            <li>기업, NGO, 개인 등 제한 없음</li>
-            <li><b>2030년까지 수요 15배 증가 전망</b></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="timeline" style="margin-top: 80px;">
+      <div class="container">
         <div class="section-header">
-          <h3>글로벌 이정표</h3>
+          <span class="eyebrow">KNOWLEDGE BASE</span>
+          <h2>탄소 경제 이해하기</h2>
+          <p>탄소 시장의 핵심 규제와 정밀 측정 체계를 통해 글로벌 비즈니스 장벽을 낮추십시오.</p>
         </div>
-        <div class="timeline-item">
-          <span class="year">1997</span>
-          <div>
-            <p class="timeline-title">교토의정서 채택</p>
-            <p class="timeline-text">온실가스 감축 의무 체제 구축 및 배출권 거래제의 효시</p>
+
+        <div class="grid-3">
+          <div class="card reveal" data-detail-id="detail-basics">
+            <span class="card-tag">Basics</span>
+            <h3 style="color: var(--primary);">탄소배출권 기초 가이드</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px;">탄소배출권의 정의와 거래제(ETS)의 핵심 작동 원리 이해
+            </p>
+            <div class="learn-more">기초 지식 보기 +</div>
+          </div>
+          <div class="card reveal" data-detail-id="detail-cbam">
+            <span class="card-tag">Risk Management</span>
+            <h3 style="color: var(--primary);">글로벌 무역 장벽: CBAM & RE100 대응</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px;">탄소국경조정제도와 공급망 탈탄소화 요구에 따른 실전 대응
+              전략</p>
+            <div class="learn-more">상세 가이드 보기 +</div>
+          </div>
+          <div class="card reveal" data-detail-id="detail-mrv">
+            <span class="card-tag">Verification</span>
+            <h3 style="color: var(--primary);">정밀 측정 및 검증: MRV & ICT 가이드</h3>
+            <p style="font-size: 0.9rem; color: var(--text-dim); margin-bottom: 20px;">온실가스 인벤토리 구축과 IT 기반의 실시간 배출량 관리
+              시스템</p>
+            <div class="learn-more">상세 가이드 보기 +</div>
           </div>
         </div>
-        <div class="timeline-item">
-          <span class="year">2016</span>
-          <div>
-            <p class="timeline-title">파리 기후협약</p>
-            <p class="timeline-text">전 세계 197개국 참여, 1.5℃ 제한 목표에 대한 전 지구적 합의</p>
+
+        <div class="milestone-grid reveal" style="margin-top: 60px;">
+          <div class="milestone-card">
+            <div class="milestone-year">1997</div>
+            <h4 class="milestone-title">교토의정서 채택</h4>
+            <p class="milestone-text">온실가스 감축 의무 체제의 효시. 선진국의 배출권 거래 기반 마련.</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <span class="year">2020.07</span>
-          <div>
-            <p class="timeline-title">탄소 ETF (KRBN) 상장</p>
-            <p class="timeline-text">탄소 배출권의 본격적인 금융 자산화 및 투자 접근성 확대</p>
+          <div class="milestone-card">
+            <div class="milestone-year">2016</div>
+            <h4 class="milestone-title">파리 기후협약</h4>
+            <p class="milestone-text">1.5℃ 제한 목표에 대한 전 지구적 합의. 상향식 감축 목표(NDC) 도입.</p>
           </div>
-        </div>
-        <div class="timeline-item">
-          <span class="year">2021~</span>
-          <div>
-            <p class="timeline-title">자발적 시장의 폭발적 성장</p>
-            <p class="timeline-text">5년 만에 5배 이상 성장, 2030년까지 15배 성장 예상</p>
+          <div class="milestone-card">
+            <div class="milestone-year">2020.07</div>
+            <h4 class="milestone-title">탄소 ETF (KRBN) 상장</h4>
+            <p class="milestone-text">탄소 배출권의 금융 자산화 가속. 투자 접근성 및 시장 유동성 확대.</p>
+          </div>
+          <div class="milestone-card">
+            <div class="milestone-year">2021~</div>
+            <h4 class="milestone-title">VCM 폭발적 성장</h4>
+            <p class="milestone-text">민간 주도의 자발적 상쇄 시장 가치 급등. 기업 넷제로 달성의 핵심 수단.</p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Strategy Section -->
+    <section class="section" id="strategy">
+      <div class="container"
+        style="background: var(--bg-card); padding: 80px 5vw; border-radius: 40px; border: 1px solid var(--border);">
+        <div class="section-header" style="text-align: center; max-width: 100%; margin-bottom: 60px;">
+          <span class="eyebrow">CORP STRATEGY</span>
+          <h2>기업의 대응 전략:<br />한계비용 최적화와 리스크 헤지</h2>
+        </div>
+
+        <div class="card-grid">
+          <div class="card" data-detail-id="detail-short">
+            <h3>단기: 규제 최적화</h3>
+            <p>정밀한 온실가스 인벤토리 구축 및 실질 배출량 산정을 통해 할당량 관리 비용을 최소화합니다.</p>
+          </div>
+          <div class="card" data-detail-id="detail-mid">
+            <h3>중기: 자산 고도화</h3>
+            <p>탄소 저감 기술 및 신재생 에너지 직접 투자를 통해 배출권 자급률을 제고하고 포트폴리오를 다변화합니다.</p>
+          </div>
+          <div class="card" data-detail-id="detail-long">
+            <h3>장기: 미래 경쟁력</h3>
+            <p>공급망 내 탄소 중립 브랜드 가치를 확립하고 저감 솔루션의 자산화를 통해 신규 수익 모델을 창출합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Modal Templates -->
+    <div id="modal-templates" style="display: none;">
+      <!-- detail-basics: 탄소배출권 기초 가이드 -->
+      <div id="detail-basics">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Carbon Basics</span>
+            <h2>탄소배출권 및 거래제(ETS)의 핵심 메커니즘</h2>
+            <p class="modal-long-text">
+              기후 변화 대응을 위한 경제적 수단으로서의 탄소배출권 개념과 전 세계적으로 확산되고 있는 배출권 거래제의 작동 원리를 이해하는 것이 탄소 경영의 첫 걸음입니다.
+            </p>
+          </div>
+
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>탄소배출권(Carbon Credit)의 정의</h3>
+              <p class="modal-long-text">
+                온실가스를 배출할 수 있는 '권리'를 의미하며, UN 기후변화협약 및 각국 정부의 규제에 의해 자산으로서의 가치를 가집니다.
+                이는 단순한 비용이 아니라, 시장에서 거래 가능한 <b>금융 자산</b>으로 취급됩니다.
+              </p>
+              <div class="note-box" style="border-left-color: var(--primary);">
+                <h4>6대 온실가스 관리 대상</h4>
+                <p>이산화탄소(CO₂), 메탄(CH₄), 아산화질소(N₂O), 수소불화탄소(HFCs), 과불화탄소(PFCs), 육불화황(SF₆) 등이 포함됩니다.</p>
+              </div>
+            </div>
+            <div class="modal-media">
+              <img src="assets/carbon_summary_2d.png" alt="Carbon Mechanism Diagram" class="modal-img-full zoomable">
+              <p class="img-caption">탄소배출권 거래 및 관리 프로세스 (2D 인포그래픽)</p>
+            </div>
+          </div>
+
+          <div class="modal-sub-section">
+            <h3>배출권 거래제(Cap-and-Trade)의 작동 원리</h3>
+            <p class="modal-long-text">
+              정부가 온실가스 배출 총량(Cap)을 설정하고, 기업들에게 배출권을 할당합니다. 기업은 할당량보다 적게 배출하면 남은 배출권을 팔 수 있고, 초과하면 시장에서 구매해야 합니다.
+            </p>
+            <div class="modal-grid-3">
+              <div class="modal-card">
+                <h4>배출 상한선(Cap)</h4>
+                <p>국가 전체의 탄소 중립 목표에 맞춰 매년 허용 배출량을 단계적으로 축소.</p>
+              </div>
+              <div class="modal-card">
+                <h4>유연성 메커니즘</h4>
+                <p>이월, 차입, 상쇄 등을 통해 기업이 시장 변동성에 유연하게 대응하도록 지원.</p>
+              </div>
+              <div class="modal-card">
+                <h4>경제적 인센티브</h4>
+                <p>감축 비용이 낮은 기업이 더 많이 감축하고 남은 권리를 판매하여 이익 창출.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- detail-ets: 글로벌 탄소 규제 동향 -->
+      <div id="detail-ets">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Compliance Market</span>
+            <h2>글로벌 배출권 거래제(ETS) 현황 및 전략 분석</h2>
+            <p class="modal-long-text">
+              세계은행(World Bank)에 따르면 매년 기후 재난으로 인한 전 세계 경제적 손실은 약 1조 3,000억 달러에 육박합니다.
+              탄소 배출권 거래제(ETS)는 이러한 기후 위기에 대응하기 위해 탄소 배출에 '가격'을 매겨 기업의 행동 변화를 유도하는 강력한 경제적 수단입니다.
+            </p>
+          </div>
+
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>금융 자산으로서의 탄소 배출권</h3>
+              <p class="modal-long-text">
+                탄소 배출권은 이산화탄소(CO₂), 메탄(CH₄), 아산화질소(N₂O) 등 6대 온실가스를 배출할 수 있는 '권리'입니다.
+                이는 이제 기업의 대차대조표에 직접 반영되는 <b>유통 가능한 금융 자산</b>입니다. 2020년 미국 KRBN ETF 상장과 2021년 한국 탄소 ETF 4종의 상장은
+                배출권이 규제 이행 수단을 넘어 기관 투자자들의 주요 포트폴리오로 편입되었음을 의미합니다.
+              </p>
+
+              <div class="note-box">
+                <h4>K-ETS: 대한민국 배출권 거래제</h4>
+                <p>아시아 최초의 전국 단위 ETS로, 2015년부터 공식 시행되었습니다. 기업은 정부로부터 할당받은 범위 내에서 배출량을 관리하며, 초과분이나 잔여분을 시장에서 거래하게 됩니다.
+                </p>
+              </div>
+            </div>
+            <div class="modal-media">
+              <img src="assets/ets_mechanism_raw.png" alt="ETS Mechanism Map" class="modal-img-full zoomable">
+              <p class="img-caption">전략적 배출권 할당 및 관리 프로세스 (클릭하여 확대)</p>
+            </div>
+          </div>
+
+
+          <div class="modal-sub-section">
+            <h3>경영진을 위한 전략적 시사점</h3>
+            <p class="modal-long-text">
+              탄소 효율은 곧 제품의 이익률과 직결됩니다. 탄소 저감 역량이 뛰어난 기업은 배출권을 판매하여 새로운 수익원을 창출(Carbon-adjusted ROI 증대)하는 반면,
+              준비되지 않은 기업은 제조 원가 상승이라는 치명적인 리스크에 직면하게 됩니다. 배출권 관리는 이제 단순한 환경 보호가 아닌 <b>원가 경쟁력의 핵심 변수</b>입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-vcm: 자발적 탄소 시장 전망 -->
+      <div id="detail-vcm">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Voluntary Market</span>
+            <h2>자발적 탄소 시장(VCM)의 폭발적 성장과 미래 가치</h2>
+            <p class="modal-long-text">
+              규제 시장(ETS)의 경직성을 보완하고 기업의 자발적인 ESG 가치를 실현하는 VCM 시장은 가히 독보적인 성장세를 기록하고 있습니다.
+              법적 의무가 없는 주체들이 탄소 중립 브랜드 구축을 위해 참여하며, 이는 미래 탄소 가격 상승에 대응하는 강력한 헤지 수단이 됩니다.
+            </p>
+          </div>
+
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>시장의 팽창: 550% 성장의 파급력</h3>
+              <p class="modal-long-text">
+                VCM 시장은 2017년 대비 2021년까지 5년 만에 5배 이상 성장하며 약 7억 4,800만 달러 규모를 돌파했습니다.
+                더욱 주목해야 할 점은 '자발적 탄소 시장 확대 태스크포스(TSVCM)'의 전망입니다. 2030년까지 글로벌 탄소 배출권 수요는 현재의 <b>최소 15배 이상</b> 증가할 것으로
+                예측됩니다.
+              </p>
+              <div class="side-note" style="border-left-color: #4db8ff; background: rgba(77, 184, 255, 0.05);">
+                <h4>Strategic Buy: 역사적 저점 포착</h4>
+                <p>수요의 급격한 팽창은 가격의 기하급수적 상승을 예고합니다. 2030년의 관점에서 볼 때 현재의 배출권 단가는 역사적 저점으로, 지금의 선제적 확보는 미래의 고비용 구조를 타파할
+                  최적의
+                  투자입니다.</p>
+              </div>
+            </div>
+            <div class="modal-media">
+              <img src="assets/vcm_growth_2d.png" alt="VCM Growth Projection" class="modal-img-full zoomable">
+              <p class="img-caption">자발적 탄소 시장(VCM) 성장 전망 (2017-2030)</p>
+            </div>
+          </div>
+
+          <div class="modal-sub-section">
+            <h3>기업이 VCM에 주목해야 하는 세 가지 이유</h3>
+            <div class="modal-grid-3">
+              <div class="modal-card">
+                <h4>금융적 헤지 (Hedge)</h4>
+                <p>규제 시장의 배출권 가격이 폭등할 때, 미리 확보한 자발적 크레딧은 재무적 충격을 완화하는 안전장치가 됩니다.</p>
+              </div>
+              <div class="modal-card">
+                <h4>브랜드 프리미엄</h4>
+                <p>선제적으로 탄소 중립을 달성한 기업은 'Green Premium'을 통해 글로벌 소비자와 투자자로부터 높은 평가를 받습니다.</p>
+              </div>
+              <div class="modal-card">
+                <h4>규제 선점 (Pre-Compliance)</h4>
+                <p>미래에 규제 대상에 편입될 수 있는 섹터의 배출량을 미리 관리함으로써 법적 리스크를 사전에 제거합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-roadmap: 탄소 경영 3단계 로드맵 -->
+      <div id="detail-roadmap">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Strategic Roadmap</span>
+            <h2>2050 넷제로 달성을 위한 3단계 통합 로드맵</h2>
+            <p class="modal-long-text">
+              탄소 중립은 정당성(Justification)의 문제를 넘어 기업 생존의 필수 요건입니다. 주식회사 탄소테크는 귀사가 탄소 규제를 새로운 도약의 기회로 전환할 수 있도록
+              고도의 탄소 금융 메커니즘을 결합한 3단계 실행 전략을 제시합니다.
+            </p>
+          </div>
+
+          <div class="modal-sub-section">
+            <div class="modal-grid-3">
+              <div class="modal-card">
+                <span class="step-num">01</span>
+                <h3>단기: 규제 리스크 최적화</h3>
+                <p class="modal-long-text" style="font-size: 0.95rem;">
+                  <b>핵심 과제: 인벤토리 및 MRV 확립</b><br>
+                  정밀한 온실가스 배출량 산정을 통해 규제 과징금을 방어하고, 할당량 매니지먼트를 최적화하여 즉각적인 재무 지출을 최소화합니다.
+                </p>
+              </div>
+              <div class="modal-card">
+                <span class="step-num">02</span>
+                <h3>중기: 자산 포트폴리오 고도화</h3>
+                <p class="modal-long-text" style="font-size: 0.95rem;">
+                  <b>핵심 과제: 저감 기술 투자 및 PPA</b><br>
+                  감축 기술 도입과 신재생 에너지 투자를 통해 배출권 자급률을 높입니다. 규제 시장 배출권(KAU)과 자발적 크레딧(VCM)의 믹스 전략을 이행합니다.
+                </p>
+              </div>
+              <div class="modal-card">
+                <span class="step-num">03</span>
+                <h3>장기: 미래 경쟁력 확립</h3>
+                <p class="modal-long-text" style="font-size: 0.95rem;">
+                  <b>핵심 과제: 공급망 브랜드 가치 구현</b><br>
+                  Scope 3를 포함한 전 공급망 탄소 중립을 달성하여 글로벌 ESG 수주 경쟁력을 확보하고, 저감 솔루션 자체를 지격 자산화하여 신수익 모델을 창출합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-sub-section">
+            <div class="modal-grid">
+              <div class="modal-text">
+                <h3>한계감축비용(MAC) 최적화 이론</h3>
+                <p class="modal-long-text">
+                  당사의 로드맵은 기업별 **한계감축비용(MAC)** 차이를 이용한 시나리오 기반 모델입니다.
+                  자체 감축 비용이 시장 가격보다 낮을 때 기술 투자를 집행하고, 시장 가격이 낮을 때 배출권을 대량 확보함으로써 사회 전체 감축 비용을 최적화하는
+                  고도의 경제적 유인 구조를 설계해 드립니다.
+                </p>
+              </div>
+              <div class="modal-media">
+                <img src="assets/mac_curve_2d.png" alt="MAC Curve and Strategy" class="modal-img-full zoomable">
+                <p class="img-caption">한계감축비용(MAC) 최적화 시나리오 (클릭하여 확대)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-short: 단기 전략 -->
+      <div id="detail-short">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Short-term Response</span>
+            <h2>단기: 규제 리스크 및 비용 최적화 (2025-2027)</h2>
+            <p class="modal-long-text">
+              규제 준수(Compliance)의 기초를 확립하고 온실가스 배출로 인한 직접적인 재무 유출을 방어하는 단계입니다.
+              정밀한 데이터 산출이 곧 비용 절감의 시작입니다.
+            </p>
+          </div>
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>데이터 기반의 원가 방어</h3>
+              <p class="modal-long-text">
+                사업장별 온실가스 배출원의 정밀 식별 및 통합 데이터베이스를 구축합니다. 정부 할당량 범위 내에서의 배출량 통제와
+                초과분 매입 전략을 수립하여 기말 결산 시 발생할 수 있는 의외의 탄소 비용 쇼크를 사전에 차단합니다.
+              </p>
+              <ul class="modal-detail-list">
+                <li><b>인벤토리 구축</b>: 전사적 배출원 전수 조사 및 실시간 DB화.</li>
+                <li><b>할당 전략 최적화</b>: 연간 배출 예측 모델을 통한 최적 매수/매도 타이밍 포착.</li>
+                <li><b>규제 리스크 감사</b>: 강화되는 환경 규제에 대한 선제적 모니터링 및 거버넌스 확립.</li>
+              </ul>
+            </div>
+            <div class="modal-media">
+              <img src="assets/compliance_risk_2d.png" alt="Short-term Strategy" class="modal-img-full zoomable">
+              <p class="img-caption">단기 규제 리스크 대응 프로세스</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-mid: 중기 전략 -->
+      <div id="detail-mid">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Mid-term Optimization</span>
+            <h2>중기: 탄소 자산 포트폴리오 고도화 (2028-2035)</h2>
+            <p class="modal-long-text">
+              배출권 시장 가격에 의존하는 수동적 리스크 관리를 넘어, 직접 감축 역량을 강화하고 감축 성과를 자산화하는 단계입니다.
+            </p>
+          </div>
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>Carbon Asset Portfolio Mix</h3>
+              <p class="modal-long-text">
+                자체 저감 기술(LCA 최적화)을 도입하여 근본적인 배출량을 줄이고, 신재생 에너지 프로젝트 투자를 통해 자발적 시장 크레딧을 확보합니다.
+                규제 배출권(KAU)과 자발적 크레딧(VCM)을 혼합하여 조달 비용을 획기적으로 낮추고 탄소 시장의 가격 변동성을 헤지합니다.
+              </p>
+              <div class="note-box" style="border-left-color: #0088ff;">
+                <h4>PPA 및 신재생 에너지 전환</h4>
+                <p>전력 구매 계약(PPA)을 통한 간접 배출량(Scope 2) 감축과 직접적인 저감 시설 투자를 병행하여 배출권 자급률을 50% 이상으로 제고합니다.</p>
+              </div>
+            </div>
+            <div class="modal-media">
+              <img src="assets/carbon_portfolio_2d.png" alt="Carbon Asset Portfolio" class="modal-img-full zoomable">
+              <p class="img-caption">탄소 자산 포트폴리오 최적화</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-long: 장기 전략 -->
+      <div id="detail-long">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Long-term Vision</span>
+            <h2>장기: 탄소 중립 브랜드 및 공급망 지배력 (2036-2050)</h2>
+            <p class="modal-long-text">
+              탄소 관세와 공급망 실사가 보편화되는 미래 시장에서 압도적인 '그린 프리미엄' 경쟁 우위를 확보하는 최종 단계입니다.
+            </p>
+          </div>
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>Net-Zero 가치의 현금화</h3>
+              <p class="modal-long-text">
+                협력사 포함 전 공급망(Scope 3)의 탄소 중립을 주도하여 글로벌 바이어의 신뢰를 독점합니다.
+                기업이 보유한 탄소 저감 솔루션 자체를 지격 자산화(SaaS/IP)하여 새로운 수익 모델을 창출하고,
+                자본 시장 내 기후 리더로서의 평가 우위를 바탕으로 최적의 자금 조달 조건을 선점합니다.
+              </p>
+              <ul class="modal-detail-list">
+                <li><b>Net-Zero Supply Chain</b>: 공급망 탈탄소화를 통한 완제품 경쟁력 제고.</li>
+                <li><b>Solution Monetization</b>: 독자적 감축 기술의 라이선스 모델화.</li>
+                <li><b>Climate Finance</b>: 그린 본드 발행 등 저금리 금융 조달 채널 확보.</li>
+              </ul>
+            </div>
+            <div class="modal-media">
+              <img src="assets/future_competitiveness_2d.png" alt="Future Competitiveness"
+                class="modal-img-full zoomable">
+              <p class="img-caption">탄소 가치가 자립하는 지속 가능 경영 모델</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-tech: 기술 기반 원가 혁신 -->
+      <div id="detail-tech">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Technology Innovation</span>
+            <h2>기술 기반 원가 혁신과 본원적 경쟁력 강화</h2>
+            <p class="modal-long-text">
+              탄소 비용이 제조 원가에 직접 반영되는 'Carbon Adjusted era' 시대, 독자적인 감축 기술 확보는 영업이익률을 방어하는 가장 확실한 재무적 수단입니다.
+              단순히 배출권을 사서 채우는 방식을 넘어, 생산 공정 자체를 저탄소화함으로써 미래 세금 리스크를 영구적으로 제거해야 합니다.
+            </p>
+          </div>
+
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>감축 기술은 곧 이익 방어 기술</h3>
+              <p class="modal-long-text">
+                제조업 현장에서 발생하는 탄소는 '관리할 수 있는 변동비'입니다. 당사는 에너지 효율화(Energy Efficiency)와 공정 전환(Process Transition)을 통해
+                배출권 구매 비용을 '0'으로 수렴시키는 R&D 전략을 제안합니다. 특히 직접적인 배출 상쇄를 위한 CCUS(탄소 포집·저장·활용) 기술의 도입은
+                기업의 좌초 자산 리스크를 수익 자산으로 극적으로 전환하는 핵심 동인이 됩니다.
+              </p>
+              <ul class="modal-detail-list">
+                <li><b>CCUS 상용화</b>: 배출 가스 내 탄소를 직접 포집하여 산업 소재로 재탄생시키는 순환 경제 모델.</li>
+                <li><b>에너지 믹스 최적화</b>: 화석 연료 의존도를 낮추고 신재생 에너지 자급률(RE100)을 높여 외부 에너지 쇼크에 대응.</li>
+              </ul>
+            </div>
+            <div class="modal-media">
+              <img src="assets/tech_process_korean_2d.png" alt="Industrial Carbon Process"
+                class="modal-img-full zoomable" style="filter: drop-shadow(0 0 20px rgba(0,255,168,0.15));">
+              <p class="img-caption">기업용 탄소 저감 및 순환 공정 도해 (다크 테마 2D)</p>
+            </div>
+          </div>
+
+          <div class="modal-sub-section">
+            <h3>인포그래픽: 미래 공장의 탄소 순환 메커니즘</h3>
+            <p class="modal-long-text">하단의 도해는 생산 공정에서 발생하는 폐열을 재활용하고 탄소를 포집하여 자산화하는 일련의 과정을 보여줍니다.</p>
+            <img src="assets/mrv_flow_2d.png" alt="MRV Data Flow" class="modal-media-full zoomable"
+              style="margin-top: 20px; max-height: 400px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-cbam: 글로벌 무역 장벽 대응 -->
+      <div id="detail-cbam">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Export Risk</span>
+            <h2>글로벌 무역 장벽: EU CBAM 및 공급망 탈탄소화 전략</h2>
+            <p class="modal-long-text">
+              대한민국은 연간 탄소 배출량 전 세계 10위권의 주요 국가로, 수출 중심의 경제 구조상 글로벌 '탄소 관세' 도입의 직접적인 영향을 받습니다.
+              CCPI 2023 60위라는 글로벌 저평가는 투자자와 바이어들에게 '탄소 고위험 프로필'로 인식되는 주된 원인이 되고 있습니다.
+            </p>
+          </div>
+
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>탄소 국경세(CBAM)의 위협과 기회</h3>
+              <p class="modal-long-text">
+                EU의 탄소국경조정제도(CBAM)는 2023년 10월부터 이미 보고 의무가 시작되었으며, 2026년부터 본격적인 과금이 개시됩니다.
+                이는 단순한 관세가 아니라 제조 제품에 포함된 탄소량(Embedded Carbon)에 비례하여 비용을 청구하는 것으로, 철강 및 알루미늄 등 제조 원가를 위협하고 있습니다.
+              </p>
+              <div class="note-box" style="border-left-color: #ff4444; background: rgba(255, 68, 68, 0.05);">
+                <h4>전략적 긴급 제언</h4>
+                <p>Apple, BMW 등 글로벌 고객사는 현재 Tier 1을 넘어 전 공급망에 RE100 및 넷제로 이행을 공식 요구하고 있습니다. 대응하지 못하는 기업은 공급망에서 배제되는 '전략적
+                  낙오' 위기에 직면해 있습니다.</p>
+              </div>
+            </div>
+            <div class="modal-media">
+              <img src="assets/cbam_mechanism_2d.png" alt="CBAM Mechanism" class="modal-img-full zoomable">
+              <p class="img-caption">EU 탄소국경조정제도(CBAM) 작동 메커니즘 및 대응 공정</p>
+            </div>
+          </div>
+
+          <div class="modal-sub-section">
+            <h3>공급망 실사 대응 체크리스트</h3>
+            <p class="modal-long-text">글로벌 바이어의 감사에 대응하기 위해 반드시 갖추어야 할 지표들입니다.</p>
+            <div class="modal-grid-3">
+              <div class="modal-card">
+                <h4>임베디드 탄소 보고</h4>
+                <p>제품 생산 단위당 발생하는 탄소량을 정밀 측정하여 바이어의 양식에 맞춰 제출하는 체계.</p>
+              </div>
+              <div class="modal-card">
+                <h4>PPA 전력 조달</h4>
+                <p>재생 에너지 직접 구매 계약을 통해 제조 공정의 전력을 100% 친환경화하였음을 증명.</p>
+              </div>
+              <div class="modal-card">
+                <h4>인증 크레딧 확보</h4>
+                <p>상쇄가 어려운 잔여 배출량에 대해 국제 인증을 받은 고품질 크레딧(Gold Standard 등) 구비.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-mrv: 정밀 측정 및 검증 서비스 -->
+      <div id="detail-mrv">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="modal-category">Technical Mechanism</span>
+            <h2>정밀 측정 및 검증: MRV & ICT 데이터 매너지먼트</h2>
+            <p class="modal-long-text">
+              "측정할 수 없는 것은 관리할 수 없습니다." 탄소 경영의 핵심은 주관적 추정치를 배제하고 객관적이며 투명한
+              측정(Measurement), 보고(Reporting), 검증(Verification) 시스템을 구축하는 것입니다.
+            </p>
+          </div>
+
+          <div class="modal-grid">
+            <div class="modal-text">
+              <h3>데이터가 자산이 되는 시대</h3>
+              <p class="modal-long-text">
+                당사는 전사적 온실가스 인벤토리 구축을 넘어, ICT 기술을 활용한 실시간 탄소 관리 솔루션을 제공합니다.
+                현장 IoT 센서를 통해 에너지 소비 패턴을 즉시 포착하고, 이를 블록체인 기반의 위변조 방지 기술로 관리하여
+                국제 사회에서 신뢰받는 탄소 데이터를 생산합니다. 정밀한 MRV 데이터는 그 자체로 탄소 금융 상품의 담보로 활용될 수 있습니다.
+              </p>
+              <div class="note-box" style="border-left-color: #00a86b;">
+                <h4>Data Monetization Strategy</h4>
+                <p>검증된 데이터는 단순 보고용이 아닌, 기후 채권 발행 및 탄소 담보 대출의 공신력 있는 근거 자료로 활용되어 기업의 자본 조달 비용을 획기적으로 낮춥니다.</p>
+              </div>
+            </div>
+            <div class="modal-media">
+              <img src="assets/mrv_flow_2d.png" alt="ICT MRV System" class="modal-img-full zoomable">
+              <p class="img-caption">ICT 기반 MRV(측정·보고·검증) 시스템 데이터 흐름</p>
+            </div>
+          </div>
+
+          <div class="modal-sub-section">
+            <h3>ICT MRV 도입의 기대 효과</h3>
+            <div class="modal-grid-3">
+              <div class="modal-card">
+                <h4>규제 리스크 Zero</h4>
+                <p>실시간으로 할당량 준수 여부를 확인하여 긴급 배출권 매입 등 예상치 못한 재무 지출 방지.</p>
+              </div>
+              <div class="modal-card">
+                <h4>에너지 효율 20% 향상</h4>
+                <p>공정별 배출량 분석을 통해 낭비 요소를 발견하고 즉각적인 운영 효율 최적화 집행 가능.</p>
+              </div>
+              <div class="modal-card">
+                <h4>크레딧 신뢰도 극대화</h4>
+                <p>VCM 시장에서 높은 가격을 받을 수 있는 'High-Integrity' 크레딧의 데이터 근거 확보.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- detail-consulting: 컨설팅 문의 모달 -->
+      <div id="detail-consulting" style="display:none;">
+        <div class="modal-body-content">
+          <div class="modal-header-visual">
+            <span class="eyebrow">Consulting Request</span>
+            <h2>전문 컨설팅 신청</h2>
+            <p>탄소 중립 및 신재생 에너지 전환을 위한 전략적 파트너십을 제안해 드립니다.</p>
+          </div>
+
+          <form class="consulting-form" onsubmit="event.preventDefault(); alert('컨설팅 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.');">
+            <div class="form-group">
+              <label>기업명 / 담당자 성함</label>
+              <input type="text" placeholder="예: (주)탄소테크 / 홍길동" required>
+            </div>
+            <div class="form-group">
+              <label>연락처 / 이메일</label>
+              <input type="text" placeholder="예: 010-1234-5678 / contact@tansotech.com" required>
+            </div>
+            <div class="form-group">
+              <label>문의 상세 내용</label>
+              <textarea rows="4" placeholder="문의하실 내용을 상세히 적어주세요." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">상담 신청하기</button>
+          </form>
+
+          <div class="consulting-info"
+            style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border);">
+            <p>📧 이메일: tansotech@gmail.com</p>
+            <p>📞 전화: 02-1234-5678</p>
+            <p>📍 주소: 서울특별시 서초구 논현로 17길 10, 3층(양재동, 재호빌딩)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <footer>
     <div class="footer-content">
       <div class="footer-info">
-        <a href="#" class="footer-logo">(주)탄소테크</a>
-        <p><b>대표이사</b>: 임경현</p>
-        <p><b>주소</b>: 서울특별시 서초구 논현로 17길 10, 3층 (양재동, 재호빌딩)</p>
-        <p><b>문의</b>: tansotech@gmail.com</p>
-        <p class="copyright">&copy; 2024 Tanso Tech Co., Ltd. All Rights Reserved.</p>
+        <a class="footer-logo" href="index.html">TANSOTECH</a>
+        <p>주식회사 탄소테크 | 대표이사: 임경현</p>
+        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">
+          사업자 등록 번호: 339-87-02343<br />
+          주소: 서울특별시 서초구 논현로 17길 10, 3층(양재동, 재호빌딩)
+        </p>
       </div>
       <div class="footer-links">
-        <h4>솔루션</h4>
-        <a href="#">신재생 에너지</a>
-        <a href="#">탄소 저감 기술</a>
-        <a href="#">데이터 분석</a>
-      </div>
-      <div class="footer-links">
-        <h4>시장 정보</h4>
-        <a href="#">규제 시장(ETS)</a>
-        <a href="#">자발적 시장(VCM)</a>
-        <a href="#">글로벌 동향</a>
+        <h4>메뉴</h4>
+        <a href="index.html">탄소테크</a>
+        <a href="tree.html">나무(탄소상쇄)</a>
+        <a href="solar.html">태양광 에너지</a>
       </div>
     </div>
   </footer>
-
-  <!-- Modal Templates -->
-  <div id="modal-templates" style="display: none;">
-    <!-- detail-ets: 규제 시장 (ETS) -->
-    <div id="detail-ets">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Compliance Strategy</span>
-          <h2>규제 시장(ETS)의 메커니즘과 자산화 전략</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>시장 작동 원리: Cap & Trade</h3>
-            <p>정부의 법적 할당량 내에서 배출 권리를 거래하며 강력한 이행 의무가 발생하는 시장입니다. 2015년 이후 한국의 배출권 거래제(K-ETS)는 기업의 제조 원가에 직접적인 영향을 미치는 주요
-              변수로 자리 잡았습니다.</p>
-            <div class="note-box">
-              <h4>한계감축비용(MAC) 최적화</h4>
-              <p>감축 기술 투자 비용이 시장 배출권 가격보다 낮을 때 프로젝트를 시행하여 리스크를 수익으로 전환하는 고도의 경제적 선택이 필요합니다. 이는 'Carbon-adjusted ROI'를
-                극대화하는 핵심입니다.</p>
-            </div>
-            <table class="data-table-mini">
-              <caption>관리 대상 6대 온실가스</caption>
-              <thead>
-                <tr>
-                  <th>가스 명칭</th>
-                  <th>특징 및 관리 비중</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>이산화탄소 (CO₂)</td>
-                  <td>화석 연료 기반, 관리 대상 중 최대 비중</td>
-                </tr>
-                <tr>
-                  <td>메탄 (CH₄)</td>
-                  <td>높은 온난화 지수 (CO₂의 25배 이상)</td>
-                </tr>
-                <tr>
-                  <td>산업용 가스 (HFCs, SF₆ 등)</td>
-                  <td>반도체/FPD 공정 발생, 극소량으로도 치명적</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-media">
-            <img src="assets/carbon_strategy.png" alt="Compliance Strategy Map" class="modal-img-full">
-            <p class="img-caption">전략적 배출권 할당 및 관리 프로세스</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-vcm: 자발적 시장 (VCM) -->
-    <div id="detail-vcm">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Voluntary Market Growth</span>
-          <h2>자발적 탄소 시장(VCM)의 폭발적 성장과 기회</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>2030년 수요 15배 증폭 전망</h3>
-            <p>기업의 ESG 가치 제고와 넷제로 선언을 위해 자율적으로 참여하는 시장입니다. 2021년 7억 4,800만 달러 규모를 돌파하며 5년 만에 5배 이상 성장했습니다.</p>
-            <div class="note-box" style="border-left-color: #4db8ff; background: rgba(77, 184, 255, 0.05);">
-              <h4>Strategic Hedge: 역사적 저점 포착</h4>
-              <p>현재의 탄소 가격은 미래 수요 대비 역사적 저점일 가능성이 높습니다. 자발적 저감 프로젝트 선제 투자는 미래의 고비용 리스크를 현재의 저비용으로 상쇄하는 강력한 금융 수단입니다.</p>
-            </div>
-            <p>VCM은 단순한 홍보를 넘어 탄소 관세(CBAM) 등 대외 규제에 대한 유연한 대응 수단이자 새로운 수익 모델로 진화하고 있습니다.</p>
-          </div>
-          <div class="modal-media">
-            <img src="assets/market_growth.png" alt="VCM Growth Graph" class="modal-img-full">
-            <p class="img-caption">자발적 탄소 시장 규모 예측 (2021-2030)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-roadmap: 3단계 로드맵 -->
-    <div id="detail-roadmap">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Strategic Roadmap</span>
-          <h2>탄소 경영 고도화 3단계 실행 전략</h2>
-        </div>
-        <div class="roadmap-steps">
-          <div class="step-item">
-            <span class="step-num">01</span>
-            <h4>단기: 리스크 관리</h4>
-            <p>온실가스 인벤토리 구축 및 실질 배출량 산정을 통한 규제 과징금 방어 및 할당량 최적화.</p>
-          </div>
-          <div class="step-item">
-            <span class="step-num">02</span>
-            <h4>중기: 자산 최적화</h4>
-            <p>감축 기술 투자 및 신재생 에너지 배출권 자급률 제고를 통한 비용 구조 다각화(Portfolio Mix).</p>
-          </div>
-          <div class="step-item">
-            <span class="step-num">03</span>
-            <h4>장기: 가치 내재화</h4>
-            <p>공급망(Scope 3) 탄소 중립 브랜드 구축 및 저강소 솔루션의 자산화를 통한 신규 수익 창출.</p>
-          </div>
-        </div>
-        <div style="margin-top: 40px;">
-          <img src="assets/carbon_data_viz_1769595785848.png" alt="Strategic Roadmap Viz" class="modal-img-full">
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-short: 단기 전략 -->
-    <div id="detail-short">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Short-term Response</span>
-          <h2>단기: 규제 리스크 및 비용 최적화</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>규제 준수(Compliance)의 기초 확립</h3>
-            <p>기업의 생산 활동에 즉각적인 비용을 부과하는 규제 리스크를 관리하는 단계입니다. 정확한 데이터 산출이 비용 절감의 시작입니다.</p>
-            <ul class="modal-detail-list">
-              <li><b>인벤토리 구축</b>: 사업장별 온실가스 배출원의 정밀 식별 및 통합 데이터베이스 구축.</li>
-              <li><b>할당량 매니지먼트</b>: 정부 할당량 범위 내에서의 배출량 통제 및 초과분 매입 전략 수립.</li>
-              <li><b>MRV 체계 강화</b>: 측정(M), 보고(R), 검증(V)의 투명성을 확보하여 법적 리스크 사전 차단.</li>
-            </ul>
-          </div>
-          <div class="modal-media">
-            <div class="stat-group" style="margin-bottom: 20px;">
-              <h4 class="stat-title">한국형 ETS 시행 연도</h4>
-              <div class="stat-value" style="font-size: 2.5rem;">2015.01</div>
-            </div>
-            <img src="assets/ets-diagram.jpg" alt="ETS Flow" class="modal-img-full">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-mid: 중기 전략 -->
-    <div id="detail-mid">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Mid-term Optimization</span>
-          <h2>중기: 탄소 자산 포트폴리오 고도화</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>배출권 자급률 제고 및 자산화</h3>
-            <p>시장 가격에 의존하는 리스크를 줄이기 위해 직접 감축 역량을 강화하고 탄소 저감을 자산으로 전환하는 단계입니다.</p>
-            <div class="note-box">
-              <p><b>Portfolio Mix Strategy</b>: 규제 배출권(KAU) 외에도 신재생 에너지 투자를 통한 자발적 감축(VCM)을 결합하여 조달 비용을 최적화합니다.</p>
-            </div>
-            <ul class="modal-detail-list">
-              <li><b>저감 기술 투자</b>: 공정 효율 개선 및 에너지 전환 기술 도입을 통한 근본적 배출량 감축.</li>
-              <li><b>신재생 에너지 개발</b>: 태양광, 풍력 등 직접 발전을 통한 탄소 상쇄(Offset) 역량 확보.</li>
-            </ul>
-          </div>
-          <div class="modal-media">
-            <img src="assets/renewable_energy_model_1769595865454.png" alt="Mid-term Strategy" class="modal-img-full">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-long: 장기 전략 -->
-    <div id="detail-long">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Long-term Vision</span>
-          <h2>장기: 공급망 브랜드 가치 및 미래 경쟁력</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>탄소 중립 기반의 비즈니스 모델 혁신</h3>
-            <p>탄소 관세와 공급망 감사가 본격화되는 미래 시장에서의 압도적 경쟁 우위를 확보하는 최종 단계입니다.</p>
-            <ul class="modal-detail-list">
-              <li><b>Scope 3 관리</b>: 협력사 포함 전체 공급망 내 탄소 중립 브랜드 구축으로 글로벌 수주 경쟁력 강화.</li>
-              <li><b>탄소 기반 신사업</b>: 저감 솔루션 자체를 지식 자산화하여 신규 수익 모델(SaaS, Consulting) 창출.</li>
-              <li><b>넷제로 선도 기업</b>: 'Green Premium'을 통한 브랜드 가치 상향 및 자본 시장 내 평가 우위 선점.</li>
-            </ul>
-          </div>
-          <div class="modal-media">
-            <img src="assets/carbon-hero.jpg" alt="Long-term Future" class="modal-img-full">
-            <p class="img-caption">지속 가능한 순환 경제 모델 구축</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-tech: 기술 기반 원가 혁신 (New) -->
-    <div id="detail-tech">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Technology Innovation</span>
-          <h2>기술 기반 원가 혁신과 본원적 경쟁력</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>감축 기술은 곧 비용 절감 기술</h3>
-            <p>탄소 비용이 제조 원가에 반영되는 시대, 독자적인 감축 기술 확보는 영업이익률을 방어하는 가장 확실한 수단입니다.</p>
-            <div class="note-box">
-              <p><b>R&D 방향성</b>: 에너지 효율화(Energy Efficiency)와 공정 전환(Process Transition)에 집중하여 배출권 구매 비용을 '0'으로 수렴시키는 것이
-                목표입니다.</p>
-            </div>
-            <ul class="modal-detail-list">
-              <li><b>CCUS 기술</b>: 포집·저장·활용 기술을 통한 직접적 배출량 상쇄.</li>
-              <li><b>스마트 팩토리</b>: FEMS(공장 에너지 관리 시스템) 도입을 통한 에너지 낭비 최소화.</li>
-            </ul>
-          </div>
-          <div class="modal-media">
-            <img src="assets/solar-hero.jpg" alt="Technology Innovation" class="modal-img-full">
-            <p class="img-caption">재생 에너지 및 고효율 공정 기술</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-ets-concept: 규제 시장 개념 (Knowledge Base) -->
-    <div id="detail-ets-concept">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Knowledge Base</span>
-          <h2>규제 시장(ETS) 핵심 개념 정리</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>왜 '강제'하는가?</h3>
-            <p>ETS는 '오염자 부담 원칙'에 따라 온실가스를 배출하는 주체에게 그에 상응하는 경제적 비용을 부과하는 제도입니다. 이는 단순한 벌금이 아니라, 시장 메커니즘을 통해 기업 스스로 감축하도록
-              유도하는 가장 효율적인 정책 수단입니다.</p>
-            <div class="note-box">
-              <p><b>K-ETS (Korea Emission Trading Scheme)</b>: 대한민국은 아시아 최초의 전국 단위 배출권 거래제를 시행하고 있으며, 이는 EU-ETS와 유사한 선진적
-                구조를 갖추고 있습니다.</p>
-            </div>
-          </div>
-          <div class="modal-media">
-            <img src="assets/emissions-graph.jpg" alt="Emissions Trend" class="modal-img-full">
-            <p class="img-caption">글로벌 탄소 배출량 추이 및 감축 필요성</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- detail-vcm-concept: 자발적 시장 개념 (Knowledge Base) -->
-    <div id="detail-vcm-concept">
-      <div class="modal-body-content">
-        <div class="modal-header-visual">
-          <span class="eyebrow">Knowledge Base</span>
-          <h2>자발적 시장(VCM) 핵심 개념 정리</h2>
-        </div>
-        <div class="modal-grid">
-          <div class="modal-text">
-            <h3>규제 밖의 새로운 기회</h3>
-            <p>법적 의무가 없는 기업이나 개인이 '탄소 중립(Carbon Neutrality)'을 선언하고 이를 달성하기 위해 자발적으로 크레딧을 구매하는 시장입니다. 이는 기업의 브랜드 가치(Brand
-              Value)와 직결됩니다.</p>
-            <ul class="modal-detail-list">
-              <li><b>Carbon Offset</b>: 직접 감축이 어려운 영역에서의 배출량을 외부 프로젝트를 통해 상쇄.</li>
-              <li><b>ESG 경영의 필수 요소</b>: 투자자와 소비자는 이제 '행동하는 기업'을 요구합니다.</li>
-              <li><b>RE100 이행 수단</b>: 글로벌 이니셔티브 달성의 핵심 경로.</li>
-            </ul>
-          </div>
-          <div class="modal-media">
-            <img src="assets/cer-diagram.png" alt="Carbon Offset Mechanism" class="modal-img-full"
-              style="background: white; padding: 10px;">
-            <p class="img-caption">자발적 감축 크레딧(CER) 생성 및 거래 프로세스</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
