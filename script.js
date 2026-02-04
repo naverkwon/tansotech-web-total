@@ -1,123 +1,102 @@
-export const initReveal = () => {
-    const revealTargets = document.querySelectorAll(
-        "section > *:not(.no-reveal), .card, .timeline-item, .data-table, .milestone-card"
-    );
+const initReveal = () => {
+  const revealTargets = document.querySelectorAll(
+    "section > *:not(.no-reveal), .card, .timeline-item, .data-table, .milestone-card"
+  );
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("in-view");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
         }
-    );
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+  );
 
-    revealTargets.forEach((el) => {
-        el.classList.add("reveal");
-        observer.observe(el);
-    });
-
-    // Fallback
-    setTimeout(() => {
-        document.querySelectorAll('.reveal:not(.in-view)').forEach(el => el.classList.add('in-view'));
-    }, 2000);
+  revealTargets.forEach((el) => {
+    el.classList.add("reveal");
+    observer.observe(el);
+  });
 };
-export class ModalManager {
-    constructor() {
-        this.modal = null;
-        this.lightbox = null;
-        this.init();
-    }
 
-    init() {
-        this.createModal();
-        this.createLightbox();
-        this.attachListeners();
-    }
+document.addEventListener('DOMContentLoaded', initReveal);
+// Fallback: If elements are still hidden after 2 seconds, show them
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.in-view)').forEach(el => el.classList.add('in-view'));
+}, 2000);
 
-    createModal() {
-        this.modal = document.createElement('div');
-        this.modal.className = 'modal-overlay';
-        this.modal.innerHTML = `
-      <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <div class="modal-body"></div>
-      </div>
-    `;
-        document.body.appendChild(this.modal);
-    }
+// Modal Logic
+const modal = document.createElement('div');
+modal.className = 'modal-overlay';
+modal.innerHTML = `
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <div class="modal-body"></div>
+  </div>
+`;
+document.body.appendChild(modal);
 
-    createLightbox() {
-        this.lightbox = document.createElement('div');
-        this.lightbox.className = 'lightbox-overlay';
-        this.lightbox.innerHTML = `<img src="" alt="Enlarged" class="lightbox-img">`;
-        document.body.appendChild(this.lightbox);
-    }
+// Lightbox Logic (Image Zoom)
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox-overlay';
+lightbox.innerHTML = `<img src="" alt="Enlarged" class="lightbox-img">`;
+document.body.appendChild(lightbox);
 
-    attachListeners() {
-        const modalClose = this.modal.querySelector('.modal-close');
-        const lightbox = this.lightbox;
+const lightboxImg = lightbox.querySelector('.lightbox-img');
+const modalBody = modal.querySelector('.modal-body');
+const modalClose = modal.querySelector('.modal-close');
 
-        modalClose.addEventListener('click', () => this.closeModal());
-        this.modal.addEventListener('click', (e) => {
-            if (e.target === this.modal) this.closeModal();
+const openLightbox = (src) => {
+  lightboxImg.src = src;
+  lightbox.classList.add('active');
+};
+
+const closeLightbox = () => {
+  lightbox.classList.remove('active');
+};
+
+lightbox.addEventListener('click', closeLightbox);
+
+document.querySelectorAll('[data-detail-id]').forEach(trigger => {
+  trigger.style.cursor = 'pointer';
+  trigger.addEventListener('click', () => {
+    const detailId = trigger.getAttribute('data-detail-id');
+    const detailContent = document.getElementById(detailId);
+    if (detailContent) {
+      modalBody.innerHTML = detailContent.innerHTML;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // Attach zoom logic to images inside modal
+      modalBody.querySelectorAll('img').forEach(img => {
+        img.classList.add('zoomable');
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openLightbox(img.src);
         });
-
-        lightbox.addEventListener('click', () => this.closeLightbox());
-
-        document.querySelectorAll('[data-detail-id]').forEach(trigger => {
-            trigger.style.cursor = 'pointer';
-            trigger.addEventListener('click', () => {
-                const detailId = trigger.getAttribute('data-detail-id');
-                this.openModal(detailId);
-            });
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                if (this.lightbox.classList.contains('active')) this.closeLightbox();
-                else this.closeModal();
-            }
-        });
+      });
     }
+  });
+});
 
-    openModal(detailId) {
-        const detailContent = document.getElementById(detailId);
-        const modalBody = this.modal.querySelector('.modal-body');
-        if (detailContent) {
-            modalBody.innerHTML = detailContent.innerHTML;
-            this.modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
+const closeModal = () => {
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+};
 
-            // Attach zoom logic to images inside modal
-            modalBody.querySelectorAll('img').forEach(img => {
-                img.classList.add('zoomable');
-                img.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    this.openLightbox(img.src);
-                });
-            });
-        }
-    }
+modalClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) closeModal();
+});
 
-    closeModal() {
-        this.modal.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    openLightbox(src) {
-        const lightboxImg = this.lightbox.querySelector('.lightbox-img');
-        lightboxImg.src = src;
-        this.lightbox.classList.add('active');
-    }
-
-    closeLightbox() {
-        this.lightbox.classList.remove('active');
-    }
-}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (lightbox.classList.contains('active')) closeLightbox();
+    else closeModal();
+  }
+});
