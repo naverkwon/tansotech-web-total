@@ -1,9 +1,9 @@
-version: '3.8'
+version: "3.8"
 
 services:
   tansotech-web:
     build: .
     container_name: tansotech-web
     ports:
-      - "8080:80"
+      - "8080:8080"
     restart: always
