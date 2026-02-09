@@ -67,11 +67,15 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--primary);
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.02em;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -951,12 +955,16 @@ footer {
 }
 
 .footer-logo {
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--primary);
-  margin-bottom: 20px;
-  display: block;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  margin-bottom: 24px;
+}
+
+.footer-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
 .footer-info p {
