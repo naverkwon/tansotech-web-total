@@ -9,7 +9,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 tree: resolve(__dirname, 'tree.html'),
                 solar: resolve(__dirname, 'solar.html'),
-                wood: resolve(__dirname, 'wood.html'),
+                solar: resolve(__dirname, 'solar.html'),
             },
         },
     },
