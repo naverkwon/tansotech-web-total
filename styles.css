@@ -73,7 +73,8 @@ body {
 }
 
 .logo img {
-  height: 32px;
+  height: 32px !important;
+  max-height: 32px !important;
   width: auto;
   display: block;
 }
@@ -107,6 +108,15 @@ body {
   cursor: pointer;
   box-shadow: 0 0 20px var(--primary-glow);
   transition: transform 0.3s ease;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-size: 1.5rem;
+  padding: 5px;
 }
 
 .nav-cta:hover {
@@ -1003,10 +1013,33 @@ footer {
 
   .nav {
     display: none;
+    position: fixed;
+    top: 80px;
+    left: 5%;
+    width: 90%;
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 30px;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 

@@ -100,3 +100,20 @@ document.addEventListener('keydown', (e) => {
     else closeModal();
   }
 });
+
+// Mobile Menu Toggle
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+
+if (burger && nav) {
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  nav.querySelectorAll('a, button').forEach(item => {
+    item.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+}
